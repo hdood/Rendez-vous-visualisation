@@ -6,25 +6,16 @@
 #include <unistd.h>
 
 struct Point{
-	int x;
+  int x;
   int y; 	
 }; 
 
-int N = 4, nproc= 0, currLine = 15; 
-
-
+int N = 4, nproc= 0, currLine = 15;
 pthread_t th[3];
-
 sem_t prive, bin, bin2;
-
 void *Personne(void *args); 
 void rdv(int i);
-  
-
 struct Point pts[5]; 
-
-
-
 
 int main(){
 			
